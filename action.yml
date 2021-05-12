@@ -1,0 +1,19 @@
+name: 'JQ'
+description: 'Run JQ on a JSON value'
+inputs:
+  input:
+    required: true
+  script:
+    required: true
+  compact:
+    required: false
+    default: 'false'
+  raw-output:
+    required: false
+    default: 'false'
+outputs:
+  output:
+    description: 'output from the jq command'
+runs:
+  using: 'node12'
+  main: 'index.js'

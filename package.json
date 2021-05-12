@@ -1,0 +1,26 @@
+{
+  "name": "jq-action",
+  "version": "1.0.0",
+  "description": "process a value with a jq script",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:edwardgeorge/jq-action.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edwardgeorge/jq-action/issues"
+  },
+  "homepage": "https://github.com/edwardgeorge/jq-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.1.0",
+    "@actions/exec": "^1.0.4",
+    "@actions/io": "^1.1.0",
+    "@actions/tool-cache": "^1.6.1"
+  }
+}
