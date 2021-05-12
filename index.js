@@ -53,10 +53,10 @@ async function run() {
     const input = core.getInput("input", {required: true});
     const script = core.getInput("script", {required: true});
     const flags = [];
-    if (core.getInput("compact") == 'true') {
+    if (core.getInput("compact") === 'true') {
       flags.push('c');
     }
-    if (core.getInput("raw-output") == 'true') {
+    if (core.getInput("raw-output") === 'true') {
       flags.push('r');
     }
     const args = flags.length > 0 ? [`-${flags.join('')}`, script] : [script];
@@ -68,6 +68,9 @@ async function run() {
       },
       input: Buffer.from(input, 'utf8')
     });
+    if (core.getInput("remove-trailing-newline", {required: false}) === "true") {
+      output = output.replace(/\r?\n$/, "");
+    }
     core.setOutput('output', output);
   } catch (error) {
     core.setFailed(error.message);

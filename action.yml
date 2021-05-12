@@ -11,6 +11,9 @@ inputs:
   raw-output:
     required: false
     default: 'false'
+  remove-trailing-newline:
+    required: false
+    default: 'true'
 outputs:
   output:
     description: 'output from the jq command'
