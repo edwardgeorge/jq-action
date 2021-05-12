@@ -1,4 +1,4 @@
-name: 'JQ Action'
+name: 'JQ Script'
 description: 'Run JQ on a JSON value'
 inputs:
   input:
