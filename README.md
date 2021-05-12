@@ -32,5 +32,5 @@ The output of the JQ script.
 uses: edwardgeorge/jq-action@main
 with:
   input: "[{\"num\": 1}, {\"num\": 2}]"
-  script: "[.[] | select(.num == '1') | .num]"
+  script: "[.[] | select(.num == 1) | .num]"
 ```
