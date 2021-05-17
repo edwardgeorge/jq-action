@@ -1,0 +1,11 @@
+fail_fast: false
+exclude: "(node_modules/|\\.licenses/|\\.?licensed.yml)"
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+      - id: check-yaml
+        args: [--allow-multiple-documents]
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+      - id: end-of-file-fixer
