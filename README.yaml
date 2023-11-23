@@ -1,0 +1,65 @@
+---
+#
+# This is the canonical configuration for the `README.md`
+# Run `make readme` to rebuild the `README.md`
+#
+
+name: github-action-jq
+
+tags:
+  - github-action
+  - jq
+
+# License of this project
+license: "MIT"
+
+github_repo: cloudposse/github-action-jq
+
+badges:
+  - name: "Latest Release"
+    image: "https://img.shields.io/github/release/cloudposse/github-action-jq.svg"
+    url: "https://github.com/cloudposse/github-action-jq/releases/latest"
+  - name: "Slack Community"
+    image: "https://slack.cloudposse.com/badge.svg"
+    url: "https://slack.cloudposse.com"
+
+related: []
+
+description: Process a input with a jq script and output result as step output
+
+references:
+  - name: "github-action-atmos-matrix-unlimited"
+    description: "Group Atmos stacks and split each group into chunk of 256 items. Workaround of github action matrix limit"
+    url: "https://github.com/cloudposse/github-action-atmos-matrix-unlimited"
+
+usage: |-
+  ```yaml
+    name: Pull Request
+    on:
+      pull_request:
+        branches: [ 'main' ]
+        types: [opened, synchronize, reopened, closed, labeled, unlabeled]
+
+    jobs:
+      example:
+        outputs:
+          result: "${{ steps.current.outputs.output }}"  
+        steps:
+          - uses: cloudposse/github-action-jq@main
+            id: current
+            with:
+              compact: true
+              input: '["test", "test2", "test3"]'
+              script: |-
+                map(select(. == "test"))
+  ```
+
+include:
+  - "docs/github-action.md"
+
+# Contributors to this project
+contributors:
+  - name: "Edward George"
+    github: "edwardgeorge"
+  - name: "Igor Rodionov"
+    github: "goruha"
