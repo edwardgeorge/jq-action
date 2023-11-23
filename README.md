@@ -96,18 +96,18 @@ It's 100% Open Source and licensed under the [MIT](LICENSE).
 
 | Name | Description | Default | Required |
 |------|-------------|---------|----------|
-| compact | compact | false | false |
-| input | input | N/A | true |
-| raw-output | raw-output | false | false |
-| remove-trailing-newline | remove-trailing-newline | true | false |
-| script | script | N/A | true |
+| compact | Compact instead of pretty-printed output | false | false |
+| input | JSON formated string | N/A | true |
+| raw-output | Output raw strings, not JSON texts | false | false |
+| remove-trailing-newline | Remove trailing newline | true | false |
+| script | JQ query string | N/A | true |
 
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| output | output from the jq command |
+| output | Output from the jq command |
 <!-- markdownlint-restore -->
 
 

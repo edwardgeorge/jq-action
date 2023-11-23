@@ -2,23 +2,28 @@ name: 'JQ Script'
 description: 'Run JQ on a JSON value'
 inputs:
   input:
+    description: JSON formated string
     required: true
   script:
+    description: JQ query string
     required: true
   compact:
+    description: Compact instead of pretty-printed output
     required: false
     default: 'false'
   raw-output:
+    description: Output raw strings, not JSON texts
     required: false
     default: 'false'
   remove-trailing-newline:
+    description: Remove trailing newline
     required: false
     default: 'true'
 outputs:
   output:
-    description: 'output from the jq command'
+    description: Output from the jq command
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'index.js'
 branding:
   icon: chevron-right
