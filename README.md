@@ -74,7 +74,7 @@ It's 100% Open Source and licensed under the [MIT](LICENSE).
   jobs:
     example:
       outputs:
-        result: "${{ steps.current.outputs.output }}"  
+        result: "${{ steps.current.outputs.output }}"
       steps:
         - uses: cloudposse/github-action-jq@main
           id: current
@@ -97,7 +97,7 @@ It's 100% Open Source and licensed under the [MIT](LICENSE).
 | Name | Description | Default | Required |
 |------|-------------|---------|----------|
 | compact | Compact instead of pretty-printed output | false | false |
-| input | JSON formated string | N/A | true |
+| input | JSON formatted string | N/A | true |
 | raw-output | Output raw strings, not JSON texts | false | false |
 | remove-trailing-newline | Remove trailing newline | true | false |
 | script | JQ query string | N/A | true |

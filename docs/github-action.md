@@ -5,7 +5,7 @@
 | Name | Description | Default | Required |
 |------|-------------|---------|----------|
 | compact | Compact instead of pretty-printed output | false | false |
-| input | JSON formated string | N/A | true |
+| input | JSON formatted string | N/A | true |
 | raw-output | Output raw strings, not JSON texts | false | false |
 | remove-trailing-newline | Remove trailing newline | true | false |
 | script | JQ query string | N/A | true |
